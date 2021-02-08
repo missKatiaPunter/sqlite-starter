@@ -7,14 +7,20 @@
 </head>
 <body>
     <!-- This is a button that will call the API and then our own route and get the data about users -->
-    <form class="get-users-form">
+    <form id="get-users">
         <input type="submit" value="Get Users">
     </form>
     <!-- Here we will output what the button brings -->
     <div class="get-users-div-shown"></div>
     <script>
+        const buttonGetData = document.getElementById('get-users');
+        buttonGetData.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch('https://dog.ceo/api/breeds/image/random')
+                .then(res => res.json())
+                .then(res => console.log(res));
+        })
 
-        
     </script>
 </body>
 </html>
