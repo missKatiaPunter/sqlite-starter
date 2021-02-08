@@ -4,7 +4,8 @@
   "description": "## This is the file I am writing into and then deleting during staff demos",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.1"
   },
   "devDependencies": {},
   "scripts": {
