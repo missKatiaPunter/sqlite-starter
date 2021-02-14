@@ -1,8 +1,12 @@
 var express = require('express');
 var app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello World');
+app.get('/', function(req, res) {
+    res.sendFile("index.html", { root: __dirname })
+});
+
+app.get('/api/users', (req, res) => {
+    res.send("here wil be users");
 })
 
 app.listen(3000, () => {
